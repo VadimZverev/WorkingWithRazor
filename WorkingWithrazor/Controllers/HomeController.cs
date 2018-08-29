@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace WorkingWithrazor.Controllers
 {
@@ -13,6 +14,12 @@ namespace WorkingWithrazor.Controllers
         public ActionResult List()
         {
             return View();
+        }
+
+        [ChildActionOnly]
+        public ActionResult Time()
+        {
+            return PartialView(DateTime.Now);
         }
     }
 }
