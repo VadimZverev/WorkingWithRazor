@@ -28,7 +28,14 @@
         Это часть макета
     </div>
 
-    @RenderSection("Footer")
+    @if (IsSectionDefined("Footer"))
+    {
+        @RenderSection("Footer")
+    }
+    else
+    {
+        <h4>Это footer по умолчанию</h4>
+    }
 
     <div class="layout">
         Это часть макета
