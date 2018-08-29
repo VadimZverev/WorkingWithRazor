@@ -9,5 +9,10 @@ namespace WorkingWithrazor.Controllers
             string[] name = { "Apple", "Orange", "Pear" };
             return View(name);
         }
+
+        public ActionResult List()
+        {
+            return View();
+        }
     }
 }
